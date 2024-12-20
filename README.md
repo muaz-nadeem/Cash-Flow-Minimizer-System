@@ -2,6 +2,45 @@
 
 This system minimizes the **number of transactions** among multiple banks in the different corners of the world that use **different modes of payment**. There is one world bank (with all payment modes) to act as an intermediary between banks that have no common mode of payment.
 
+Let's begin with a simple example here to help you understand the concept of minimized transactions.
+Let's say there there three persons. 
+1.Charlie
+2.John
+3.Smith
+
+Charlie takes $50 from John
+John takes $70 from Smith
+Smith takes $50 from Charlie
+
+To minimize the transactions among the given individuals, the net balance of each person needs to be calculated first. Here's how the balances work out:
+
+Charlie takes $50 from John:
+
+Charlie's balance increases by $50 (+50).
+John's balance decreases by $50 (-50).
+
+John takes $70 from Smith:
+
+John's balance increases by $70 (+70).
+Smith's balance decreases by $70 (-70).
+
+Smith takes $50 from Charlie:
+
+Smith's balance increases by $50 (+50).
+Charlie's balance decreases by $50 (-50).
+
+Net Balances
+Charlie: +50 (from John) - 50 (to Smith) = 0
+John: -50 (to Charlie) + 70 (from Smith) = +20
+Smith: -70 (to John) + 50 (from Charlie) = -20
+
+Minimized Transactions
+Smith owes $20 to John.
+
+This single transaction settles all debts efficiently.
+
+Now, in this code, we are doing this with banks and the catch is the payment method that each bank accepts. You will understand the following example clearly now.
+
 # Getting Started
 
 Let's take an example. say we have the following banks:
